@@ -13,10 +13,21 @@ app = FastAPI(
     description="Backend API for BookNest Digital Library",
 )
 
-# Enable CORS for Next.js frontend
+import os
+
+# Enable CORS for Next.js frontend (localhost + all Vercel deployments)
+allowed_origins = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+frontend_url = os.getenv("FRONTEND_URL")
+if frontend_url:
+    allowed_origins.append(frontend_url)
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=allowed_origins,
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
