@@ -241,7 +241,7 @@ export function BookScene3D({ title, author, category, className = "h-72 w-full"
   }, []);
 
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative touch-pan-y select-none ${className}`}>
       <Canvas
         camera={{ position: [0, 0, 5.2], fov: 45 }}
         gl={{ antialias: true, alpha: true }}

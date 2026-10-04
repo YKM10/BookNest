@@ -67,12 +67,12 @@ export default function LandingPage() {
                 Modern University Digital Library
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
                 Discover Knowledge with{" "}
                 <span className="text-indigo-600 bg-clip-text">BookNest</span>
               </h1>
 
-              <p className="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 A modern digital library platform connecting students and faculty to extensive academic
                 and general literature with automated borrowing, catalog search, and real-time inventory.
               </p>

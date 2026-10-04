@@ -214,12 +214,12 @@ export function AILibrarianWidget({ initialBookId, initialQuery }: AILibrarianWi
   return (
     <>
       {/* Floating Action Button */}
-      <div className="fixed bottom-6 right-6 z-40">
+      <div className="fixed bottom-20 md:bottom-6 right-4 md:right-6 z-40">
         <motion.button
           onClick={() => setIsOpen((prev) => !prev)}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-tr from-indigo-600 to-indigo-500 text-white shadow-xl shadow-indigo-300 transition focus:outline-none focus:ring-4 focus:ring-indigo-300"
+          className="relative flex h-13 w-13 md:h-14 md:w-14 items-center justify-center rounded-2xl bg-gradient-to-tr from-indigo-600 to-indigo-500 text-white shadow-xl shadow-indigo-300 transition focus:outline-none focus:ring-4 focus:ring-indigo-300"
           title="Ask AI Librarian"
         >
           {isOpen ? <X className="h-6 w-6" /> : <Sparkles className="h-6 w-6" />}
@@ -240,7 +240,7 @@ export function AILibrarianWidget({ initialBookId, initialQuery }: AILibrarianWi
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 30, scale: 0.96 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-24 right-4 sm:right-6 z-50 flex h-[620px] max-h-[85vh] w-[95vw] sm:w-[480px] flex-col rounded-3xl border border-slate-200/80 bg-white shadow-2xl overflow-hidden backdrop-blur-md"
+            className="fixed inset-x-2 bottom-20 md:bottom-24 md:right-6 md:left-auto md:w-[480px] z-50 flex h-[78dvh] md:h-[620px] max-h-[85dvh] flex-col rounded-3xl border border-slate-200/80 bg-white shadow-2xl overflow-hidden backdrop-blur-md"
           >
             {/* Header */}
             <div className="flex items-center justify-between border-b border-slate-100 bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 p-4 text-white">
@@ -442,7 +442,7 @@ export function AILibrarianWidget({ initialBookId, initialQuery }: AILibrarianWi
                     value={inputMessage}
                     onChange={(e) => setInputMessage(e.target.value)}
                     placeholder="Ask about books, borrowing, or due dates..."
-                    className="flex-1 rounded-xl border border-slate-300 px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-indigo-600 focus:outline-none focus:ring-1 focus:ring-indigo-600"
+                    className="flex-1 rounded-xl border border-slate-300 px-3.5 py-2.5 text-base sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-indigo-600 focus:outline-none focus:ring-1 focus:ring-indigo-600"
                     disabled={isSending}
                   />
                   <button

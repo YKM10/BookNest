@@ -26,7 +26,7 @@ export function BorrowingTable({
   return (
     <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
       <div className="overflow-x-auto">
-        <table className="min-w-full divide-y divide-slate-200 text-left text-sm">
+        <table className="min-w-[650px] w-full divide-y divide-slate-200 text-left text-sm">
           <thead className="bg-slate-50 text-xs font-bold uppercase tracking-wider text-slate-500">
             <tr>
               <th className="px-5 py-3.5">ID</th>

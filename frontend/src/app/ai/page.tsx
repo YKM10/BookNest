@@ -239,26 +239,26 @@ export default function AILibrarianPage() {
           </div>
 
           {/* Mode Switcher */}
-          <div className="inline-flex rounded-xl border border-slate-200 bg-white p-1 shadow-2xs text-xs font-semibold">
+          <div className="flex flex-wrap sm:inline-flex w-full sm:w-auto rounded-xl border border-slate-200 bg-white p-1 shadow-2xs text-xs font-semibold gap-1">
             <button
               onClick={() => setActiveMode("chat")}
-              className={`rounded-lg px-3.5 py-1.5 transition ${
+              className={`flex-1 sm:flex-initial rounded-lg px-3 py-1.5 transition text-center ${
                 activeMode === "chat" ? "bg-indigo-600 text-white shadow-2xs" : "text-slate-600 hover:text-slate-900"
               }`}
             >
-              💬 Interactive Chat
+              💬 Chat
             </button>
             <button
               onClick={() => setActiveMode("search")}
-              className={`rounded-lg px-3.5 py-1.5 transition ${
+              className={`flex-1 sm:flex-initial rounded-lg px-3 py-1.5 transition text-center ${
                 activeMode === "search" ? "bg-indigo-600 text-white shadow-2xs" : "text-slate-600 hover:text-slate-900"
               }`}
             >
-              🔍 Semantic Search
+              🔍 Search
             </button>
             <button
               onClick={() => setActiveMode("recommend")}
-              className={`rounded-lg px-3.5 py-1.5 transition ${
+              className={`flex-1 sm:flex-initial rounded-lg px-3 py-1.5 transition text-center ${
                 activeMode === "recommend" ? "bg-indigo-600 text-white shadow-2xs" : "text-slate-600 hover:text-slate-900"
               }`}
             >
@@ -403,20 +403,20 @@ export default function AILibrarianPage() {
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
                 placeholder="Ask about books, machine learning, due dates, or borrowing rules..."
-                className="flex-1 rounded-xl border border-slate-300 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-indigo-600 focus:outline-none focus:ring-1 focus:ring-indigo-600"
+                className="flex-1 rounded-xl border border-slate-300 px-3.5 sm:px-4 py-2.5 sm:py-3 text-base sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-indigo-600 focus:outline-none focus:ring-1 focus:ring-indigo-600"
                 disabled={isSending}
               />
               <button
                 type="submit"
                 disabled={!inputMessage.trim() || isSending}
-                className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-md shadow-indigo-200 hover:bg-indigo-700 disabled:opacity-40 disabled:cursor-not-allowed transition"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-indigo-600 px-4 sm:px-5 py-2.5 sm:py-3 text-sm font-semibold text-white shadow-md shadow-indigo-200 hover:bg-indigo-700 disabled:opacity-40 disabled:cursor-not-allowed transition flex-shrink-0"
               >
                 {isSending ? (
                   <Sparkles className="h-4 w-4 animate-spin" />
                 ) : (
                   <>
                     <Send className="h-4 w-4" />
-                    <span>Send</span>
+                    <span className="hidden sm:inline">Send</span>
                   </>
                 )}
               </button>

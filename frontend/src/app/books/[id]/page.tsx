@@ -209,12 +209,12 @@ export default function BookDetailsPage({ params }: { params: Promise<{ id: stri
             </div>
           </div>
         ) : (
-          <div className="rounded-2xl border border-slate-200/80 bg-white p-6 sm:p-8 shadow-sm">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+          <div className="rounded-2xl border border-slate-200/80 bg-white p-4 sm:p-6 lg:p-8 shadow-sm">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-start">
               {/* Left Column: 3D Book canvas & actions */}
               <div className="md:col-span-4 flex flex-col items-center">
                 <div className="w-full flex flex-col items-center">
-                  <div className="w-full max-w-[280px] h-80 relative flex items-center justify-center rounded-2xl bg-gradient-to-b from-slate-100 to-indigo-50/40 p-2 shadow-inner border border-slate-200/80 overflow-hidden">
+                  <div className="w-full max-w-[280px] h-72 sm:h-80 relative flex items-center justify-center rounded-2xl bg-gradient-to-b from-slate-100 to-indigo-50/40 p-2 shadow-inner border border-slate-200/80 overflow-hidden">
                     <BookScene3D
                       title={book.title}
                       author={book.author}
@@ -223,7 +223,7 @@ export default function BookDetailsPage({ params }: { params: Promise<{ id: stri
                     />
                   </div>
                   <span className="mt-2 text-[11px] font-medium text-slate-400">
-                    Interactive 3D Book (move cursor to tilt)
+                    Interactive 3D Book (drag or touch to tilt)
                   </span>
                 </div>
 

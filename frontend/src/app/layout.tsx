@@ -8,6 +8,13 @@ export const metadata: Metadata = {
   description: "Modern digital library application connected to FastAPI and PostgreSQL",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#4f46e5",
+};
+
 export default function RootLayout({
   children,
 }: {
